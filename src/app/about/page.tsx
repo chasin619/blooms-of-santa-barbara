@@ -28,7 +28,7 @@ export default function AboutPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "About", path: "/about" }])} />
-      <PageHero image="/images/hero-about.webp" imageAlt="A florist arranging fresh flowers in a vase at a studio work table" position="50% 40%" eyebrow="Our story" title="A boutique studio in the heart of Santa Barbara." lede="Blooms of Santa Barbara began in 2017 with one designer, a love of garden flowers and a town full of beautiful places to get married." crumbs={[{ name: "About" }]} />
+      <PageHero image="/images/bride-veil-door.webp" imageAlt="A bride lifting her veil at a carved wooden door, holding a bouquet of white blooms" position="60% 30%" eyebrow="Our story" title="A boutique studio in the heart of Santa Barbara." lede="Blooms of Santa Barbara began in 2017 with one designer, a love of garden flowers and a town full of beautiful places to get married." crumbs={[{ name: "About" }]} />
 
       <section className="py-24 md:py-32">
         <Container>
@@ -49,7 +49,7 @@ export default function AboutPage() {
                   The studio is small on purpose. One designer sees every wedding through, so the person you talk to on the first call is the person placing the last arrangement on the day. That is how the details stay yours: the flower your grandmother grew, the ribbon that matches the invitations, the one color you asked us to leave out.
                 </p>
                 <p>
-                  Our style follows the coast. Soft neutrals and blush with garden roses, ranunculus, peonies and sweet peas; olive, jasmine and citrus from the gardens around us; candlelight on every table. Couples with bolder palettes, from saturated jewel tones to sun-washed brights, get the same care.
+                  Our style follows the coast and the garden. Peach, pink and lavender garden roses, ranunculus, sweet peas and scabiosa; olive, jasmine and blossoming branches from the gardens around us; candlelight on every table. Couples who want soft ivory and blush, or saturated burgundy and citrus, get the same care.
                 </p>
               </Reveal>
               <Reveal delay={2} className="mt-9 flex flex-wrap gap-4">
@@ -102,7 +102,7 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={1} className="lg:col-span-6 lg:col-start-7">
               <div className="frame aspect-[4/3] rounded-[6px] shadow-soft">
-                <Image src="/images/studio-peonies.webp" alt="Buckets of white peonies and garden roses in the studio" fill sizes="(max-width: 1024px) 90vw, 50vw" className="object-cover" />
+                <Image src="/images/reception-centerpiece.webp" alt="A reception centerpiece of burgundy, blush and pink blooms with taper candles" fill sizes="(max-width: 1024px) 90vw, 50vw" className="object-cover" />
               </div>
               <p className="mt-6 text-[1rem] leading-[1.8] text-muted">
                 We meet couples by phone and video, and in Santa Barbara at the studio by appointment, with blooms on the table. On wedding days we are on site with the flowers, so a weekend message may be answered the next morning; otherwise we reply {SITE.responseTime}.

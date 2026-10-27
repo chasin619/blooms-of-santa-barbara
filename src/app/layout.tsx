@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     url: SITE.url,
     title: TITLE,
     description: "Boutique wedding and event florals in Santa Barbara, California, designed by Sandy Shields.",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "A garden ceremony dressed in white blooms by Blooms of Santa Barbara" }],
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "A bride and her bridesmaids holding colorful garden bouquets by Blooms of Santa Barbara" }],
   },
   twitter: {
     card: "summary_large_image",

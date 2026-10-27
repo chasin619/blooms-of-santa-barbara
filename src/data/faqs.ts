@@ -23,7 +23,7 @@ export const faqs: Faq[] = [
   },
   {
     question: "What is your style?",
-    answer: "Garden-gathered and romantic: loose shapes, seasonal blooms, soft neutrals and blush as a signature, and candlelight. We design in every palette, from moody and saturated to bright and sunny, and we will tell you which flowers will look best on your date.",
+    answer: "Garden-gathered and romantic: loose shapes, seasonal blooms, candlelight, and color. Peach, pink and lavender are the studio's signature, soft ivory and blush suit the quieter weddings, and we design in every palette from moody burgundy to bright citrus. We will tell you which flowers will look best on your date.",
   },
   {
     question: "Can we meet before we book?",

@@ -38,7 +38,7 @@ export default function ServicesPage() {
   return (
     <>
       <JsonLd data={[breadcrumbSchema([{ name: "Services", path: "/services" }]), faqSchema(faqs)]} />
-      <PageHero image="/images/hero-services.webp" imageAlt="A white floral centerpiece on a wedding reception table" eyebrow="Services" title="Every flower on the day, from one small studio." lede="Bouquets, ceremonies, tables and the celebrations around them, designed by Sandy and delivered, set and collected by our own team." crumbs={[{ name: "Services" }]} position="50% 50%" />
+      <PageHero image="/images/ceremony-church-aisle.webp" imageAlt="Lavender, white and pink aisle arrangements inside a historic stone church" eyebrow="Services" title="Every flower on the day, from one small studio." lede="Bouquets, ceremonies, tables and the celebrations around them, designed by Sandy and delivered, set and collected by our own team." crumbs={[{ name: "Services" }]} position="50% 50%" />
 
       <section className="py-24 md:py-32">
         <Container>
@@ -57,7 +57,7 @@ export default function ServicesPage() {
           <div className="grid items-center gap-14 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
               <div className="frame arch aspect-[4/5] max-w-md">
-                <Image src="/images/table-candlelight.webp" alt="A long reception table set with flowers and warm candlelight" fill sizes="(max-width: 1024px) 90vw, 40vw" className="object-cover" />
+                <Image src="/images/reception-centerpiece.webp" alt="A reception centerpiece of burgundy, blush and pink blooms with taper candles" fill sizes="(max-width: 1024px) 90vw, 40vw" className="object-cover" />
               </div>
             </Reveal>
             <div className="lg:col-span-6 lg:col-start-7">

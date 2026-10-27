@@ -39,7 +39,7 @@ export default function ThankYouPage() {
           </div>
           <div className="lg:col-span-5 lg:col-start-8">
             <div className="frame arch aspect-[4/5] max-w-sm shadow-soft">
-              <Image src="/images/bouquet-peony-held.webp" alt="A bride holding a bouquet of blush peonies" fill sizes="(max-width: 1024px) 80vw, 35vw" className="object-cover" />
+              <Image src="/images/couple-library-bouquet.webp" alt="A couple seated in a library, the bride holding a colorful garden bouquet" fill sizes="(max-width: 1024px) 80vw, 35vw" className="object-cover" />
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ export default function FaqPage() {
   return (
     <>
       <JsonLd data={[breadcrumbSchema([{ name: "FAQ", path: "/faq" }]), faqSchema(faqs)]} />
-      <PageHero image="/images/white-roses-greenery.webp" imageAlt="White roses and greenery, close up" eyebrow="Questions" title="Good to know before you inquire." lede="How we quote, where we go, what we design and how the day runs. If your question is not here, send it in an inquiry and we will answer it directly." crumbs={[{ name: "FAQ" }]} position="50% 50%" />
+      <PageHero image="/images/installation-blossoms.webp" imageAlt="Ground installations of white and peach blooms and blossoming branches at the entrance of a white Spanish building" eyebrow="Questions" title="Good to know before you inquire." lede="How we quote, where we go, what we design and how the day runs. If your question is not here, send it in an inquiry and we will answer it directly." crumbs={[{ name: "FAQ" }]} position="50% 50%" />
 
       <section className="py-20 md:py-28">
         <Container narrow>

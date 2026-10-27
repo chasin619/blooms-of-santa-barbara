@@ -40,7 +40,7 @@ export default function ContactPage() {
 
             <aside className="lg:col-span-4 lg:col-start-9">
               <Reveal delay={1} className="frame arch aspect-[4/5] shadow-soft">
-                <Image src="/images/contact-side.webp" alt="A bouquet of roses and eucalyptus by a sunlit window" fill sizes="(max-width: 1024px) 90vw, 30vw" className="object-cover" />
+                <Image src="/images/bouquet-bride-ribbon.webp" alt="A bride holding a loose bouquet of white and burgundy blooms with a trailing silk ribbon" fill sizes="(max-width: 1024px) 90vw, 30vw" className="object-cover" />
               </Reveal>
               <Reveal delay={2} className="mt-10 space-y-8 text-sm leading-relaxed text-muted">
                 <div>

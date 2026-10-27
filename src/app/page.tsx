@@ -39,7 +39,11 @@ export default function HomePage() {
 
       {/* Hero: the cover. The wordmark, one soft line of what we do, two doors in. */}
       <section className="relative isolate flex h-[100svh] min-h-[640px] items-center justify-center overflow-hidden bg-plum-900 text-petal">
-        <Image src="/images/hero-home.webp" alt="A garden wedding ceremony framed by arches of white blooms, with gold chairs along a petal-lined aisle" fill priority sizes="(orientation: portrait) 160vh, 100vw" className="hero-image object-cover" style={{ objectPosition: "50% 45%" }} />
+        {/* Two covers from the studio's own weddings: the bridal party's bouquets on wide screens, the beach arch on phones. */}
+        <picture>
+          <source media="(max-width: 639px)" srcSet="/images/ceremony-beach-arch.webp" />
+          <img src="/images/bouquets-bridal-party.webp" alt="A bride and her bridesmaids holding colorful garden bouquets of peach, pink, lavender and white blooms" fetchPriority="high" className="hero-image absolute inset-0 h-full w-full object-cover object-[50%_40%] sm:object-[50%_55%]" />
+        </picture>
         <div className="hero-overlay-cover absolute inset-0" aria-hidden="true" />
         <div className="relative flex flex-col items-center px-5 text-center">
           <p className="rise on-photo-strong text-[11px] font-bold uppercase tracking-[0.36em] text-petal sm:text-[13px]">Santa Barbara · California</p>
@@ -91,14 +95,14 @@ export default function HomePage() {
           <div className="grid items-center gap-14 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
               <div className="frame arch mx-auto aspect-[4/5] max-w-md shadow-soft">
-                <Image src="/images/intro-arch.webp" alt="A ceremony arch of white blooms beneath a red-tile pergola beside the water" fill sizes="(max-width: 1024px) 90vw, 40vw" className="object-cover" />
+                <Image src="/images/couple-library-bouquet.webp" alt="A couple seated in a library, the bride holding a colorful garden bouquet" fill sizes="(max-width: 1024px) 90vw, 40vw" className="object-cover" />
               </div>
             </Reveal>
             <div className="lg:col-span-6 lg:col-start-7">
               <SectionHeading eyebrow="A boutique floral studio" title={<>Flowers that feel gathered, not arranged.</>} />
               <Reveal delay={1} className="prose-bsb mt-8">
                 <p>
-                  {SITE.name} is a boutique floral design studio nestled in the heart of Santa Barbara, California, founded by {SITE.founder} in {SITE.founded}. We design the flowers for weddings, private events and parties up and down the Central Coast: loose, garden-gathered bouquets, ceremony arches that frame the view, and reception tables lit by candles and softened with blush and ivory blooms.
+                  {SITE.name} is a boutique floral design studio nestled in the heart of Santa Barbara, California, founded by {SITE.founder} in {SITE.founded}. We design the flowers for weddings, private events and parties up and down the Central Coast: loose, garden-gathered bouquets in peach, pink and lavender, ceremony arches that frame the ocean, and reception tables lit by candles.
                 </p>
                 <p>
                   Every wedding is designed by Sandy herself, from the first conversation to the last vase collected at the end of the night. Couples say the same things in their reviews: she listens, she is honest about budget, she replies quickly, and the flowers were more beautiful than they imagined.
@@ -233,7 +237,7 @@ export default function HomePage() {
             </div>
             <Reveal className="order-1 lg:order-2 lg:col-span-5 lg:col-start-8">
               <div className="frame arch mx-auto aspect-[3/4] max-w-sm shadow-soft">
-                <Image src={founder.image} alt={founder.imageAlt} fill sizes="(max-width: 1024px) 80vw, 35vw" className="object-cover" />
+                <Image src="/images/installation-courtyard.webp" alt="A meadow-style arrangement of white and peach blooms with lanterns in a white courtyard, designed by Sandy Shields" fill sizes="(max-width: 1024px) 80vw, 35vw" className="object-cover" />
               </div>
             </Reveal>
           </div>

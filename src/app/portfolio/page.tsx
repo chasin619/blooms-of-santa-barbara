@@ -22,7 +22,7 @@ export default function PortfolioPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Portfolio", path: "/portfolio" }])} />
-      <PageHero image="/images/hero-portfolio.webp" imageAlt="A floral ceremony arch of greenery and white blooms above a stone balustrade with the ocean behind" eyebrow="Portfolio" title="Flowers we have had the joy to design." lede="Bouquets, ceremonies, tables and the small details from weddings and celebrations on the Central Coast. Choose a category or open any image." crumbs={[{ name: "Portfolio" }]} position="50% 45%" />
+      <PageHero image="/images/ceremony-beach-arch.webp" imageAlt="A circular ceremony arch of pink, peach and blue garden flowers above a Santa Barbara beach" eyebrow="Portfolio" title="Flowers we have had the joy to design." lede="Bouquets, ceremonies, tables and installations from weddings and celebrations on the Central Coast, all our own work. Choose a category or open any image." crumbs={[{ name: "Portfolio" }]} position="50% 45%" />
 
       <section className="py-20 md:py-28">
         <Container>

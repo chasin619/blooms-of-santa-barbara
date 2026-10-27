@@ -22,7 +22,7 @@ export default function ReviewsPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Reviews", path: "/reviews" }])} />
-      <PageHero image="/images/hero-reviews.webp" imageAlt="A reception table dressed with pink and white roses under string lights" eyebrow="Praise" title="Kind words from the couples we have designed for." lede="Blooms of Santa Barbara holds a five-star rating on The Knot. Here is what couples say most often, and where to read every review in full." crumbs={[{ name: "Reviews" }]} position="50% 55%" />
+      <PageHero image="/images/bouquets-bridal-party.webp" imageAlt="A bride and her bridesmaids holding colorful garden bouquets" eyebrow="Praise" title="Kind words from the couples we have designed for." lede="Blooms of Santa Barbara holds a five-star rating on The Knot. Here is what couples say most often, and where to read every review in full." crumbs={[{ name: "Reviews" }]} position="50% 55%" />
 
       <section className="border-b border-plum-900/10 bg-blush-50 py-14">
         <Container>

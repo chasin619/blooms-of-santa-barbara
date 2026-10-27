@@ -37,11 +37,13 @@ Pages: home, about, services hub plus 6 service pages, portfolio, reviews, locat
 
 ## Photos
 
-The studio's photos live on Instagram and The Knot and could not be pulled from the build environment, so the site launches with free-license Pexels photography as placeholders (listed in `IMAGE-SOURCES.md`). The founder portrait is a stock florist, not Sandy; replace it first. To replace the rest with the studio's own photos:
+The cover, the services, the portfolio and the photo frames are the studio's own photographs, supplied by the owner (see `IMAGE-SOURCES.md` for which photo is where). They are served at their original size, so higher-resolution exports of the same images would sharpen the home cover and the heroes on large screens. Only the location pages still use stock scenery of each area, and there is no portrait of Sandy yet: her frames show her work until one is added to `src/data/team.ts`.
 
-1. Download the photos from Instagram, The Knot or the photographers into a folder, for example `./photos-in` (ignored by git).
+To add or replace photos:
+
+1. Put the exports in a folder, for example `./photos-in` (ignored by git).
 2. Run `node scripts/import-images.mjs ./photos-in --prefix portfolio`. Each photo becomes an optimized WebP in `public/images/`, and the script prints ready-to-paste lines with the measured aspect ratio.
-3. Paste the lines into `src/data/portfolio.ts` with alt text and a category. To replace a hero or service photo, give the new file the same name as the old one (for example `hero-home.webp`) and nothing else changes.
+3. Paste the lines into `src/data/portfolio.ts` with alt text and a category, or give a file the name of the photo it replaces (for example `ceremony-beach-arch.webp`) and nothing else changes.
 
 ## Reviews
 
@@ -59,7 +61,7 @@ See `.env.example`. Nothing is required to build or run.
 
 1. Confirm the domain. `SITE.url` in `src/data/site.ts` is `https://www.bloomsofsantabarbara.com`, which the business does not own yet; buy it or change it, then point it at Vercel.
 2. Confirm the business facts in `src/data/site.ts` with Sandy: phone, the studio email (`SITE.email`, shown in the footer and contact page once set), the rating line and the service areas.
-3. Replace the placeholder photos (see Photos above), starting with the founder portrait, the home cover, the six service images and the portfolio.
+3. Add a portrait of Sandy (`src/data/team.ts`) and, if available, higher-resolution exports of the photos (see Photos above).
 4. Paste verbatim reviews into `src/data/reviews.ts` (see Reviews above).
 5. Connect Instagram (one of the two options above) so "Follow along" shows the real feed.
 6. Set the email and Velour Web variables in Vercel and redeploy. In Velour Web, add the site to `src/data/managed-sites.ts` with its domain origins, then copy its tracking values from /admin.
