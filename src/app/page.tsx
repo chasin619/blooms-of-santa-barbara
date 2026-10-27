@@ -42,13 +42,13 @@ export default function HomePage() {
         <Image src="/images/hero-home.webp" alt="A garden wedding ceremony framed by arches of white blooms, with gold chairs along a petal-lined aisle" fill priority sizes="(orientation: portrait) 160vh, 100vw" className="hero-image object-cover" style={{ objectPosition: "50% 45%" }} />
         <div className="hero-overlay-cover absolute inset-0" aria-hidden="true" />
         <div className="relative flex flex-col items-center px-5 text-center">
-          <p className="rise on-photo-strong text-[11px] font-semibold uppercase tracking-[0.36em] text-petal sm:text-[12px]">Santa Barbara · California</p>
+          <p className="rise on-photo-strong text-[11px] font-bold uppercase tracking-[0.36em] text-petal sm:text-[13px]">Santa Barbara · California</p>
           {/* The left padding matches the tracking after the last letter, so the word sits truly centered. */}
           <h1 className="rise rise-1 on-photo-strong mt-6 flex flex-col items-center leading-none text-petal">
             <span className="brand pl-[0.22em] text-[clamp(3.6rem,15vw,9.5rem)] leading-[0.95]">Blooms</span>
-            <span className="brand-sub mt-3 text-[clamp(1.3rem,3.4vw,2.5rem)] text-petal/95 sm:mt-4">of Santa Barbara</span>
+            <span className="brand-sub mt-3 text-[clamp(1.4rem,3.6vw,2.7rem)] font-medium text-petal sm:mt-4">of Santa Barbara</span>
           </h1>
-          <p className="rise rise-2 on-photo mt-8 max-w-xl font-serif text-[1.25rem] italic leading-snug text-petal/95 sm:text-[1.5rem]">Wedding and event florals, gathered with a soft hand for the Central Coast.</p>
+          <p className="rise rise-2 on-photo-strong mt-8 max-w-xl font-serif text-[1.4rem] font-medium italic leading-snug text-petal sm:text-[1.7rem]">Wedding and event florals, gathered with a soft hand for the Central Coast.</p>
           <div className="rise rise-3 mt-9 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <ButtonLink href="/portfolio" variant="light">
               Portfolio
@@ -58,7 +58,7 @@ export default function HomePage() {
             </ButtonLink>
           </div>
         </div>
-        <p className="rise rise-3 on-photo absolute inset-x-0 bottom-8 px-5 text-center text-[10px] font-semibold uppercase tracking-[0.24em] text-petal/85 sm:bottom-10 sm:text-[12px]">
+        <p className="rise rise-3 on-photo-strong absolute inset-x-0 bottom-8 px-5 text-center text-[11px] font-bold uppercase tracking-[0.24em] text-petal sm:bottom-10 sm:text-[12px]">
           Santa Barbara · Montecito · Goleta · Carpinteria · Santa Ynez Valley · Ojai
         </p>
       </section>

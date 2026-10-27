@@ -128,9 +128,12 @@ html.js .reveal.is-visible {
 }
 
 /* ---------- Hero ---------- */
-/* The home cover: a light plum wash so the flowers stay bright, deeper at the foot for the area line. */
+/* The home cover: a plum wash with a deeper pool behind the centered wording, so the thin capitals
+   read against white flowers, and darker still at the foot for the area line. */
 .hero-overlay-cover {
-  background: linear-gradient(180deg, rgba(43, 27, 34, 0.42) 0%, rgba(43, 27, 34, 0.26) 50%, rgba(43, 27, 34, 0.78) 100%);
+  background:
+    radial-gradient(62% 52% at 50% 50%, rgba(43, 27, 34, 0.58), rgba(43, 27, 34, 0.2) 70%, transparent 100%),
+    linear-gradient(180deg, rgba(43, 27, 34, 0.5) 0%, rgba(43, 27, 34, 0.3) 50%, rgba(43, 27, 34, 0.82) 100%);
 }
 /* Inner-page heroes: darker top and bottom, a soft pool behind the text, and a rose tint. */
 .hero-overlay-bottom {
@@ -146,8 +149,9 @@ html.js .reveal.is-visible {
 }
 .on-photo-strong {
   text-shadow:
-    0 2px 4px rgba(43, 27, 34, 0.6),
-    0 10px 40px rgba(43, 27, 34, 0.55);
+    0 1px 2px rgba(43, 27, 34, 0.9),
+    0 3px 10px rgba(43, 27, 34, 0.7),
+    0 14px 48px rgba(43, 27, 34, 0.7);
 }
 @keyframes heroZoom {
   from {
