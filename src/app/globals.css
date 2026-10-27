@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-padding-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  @apply bg-petal text-ink antialiased;
+  font-family: var(--font-nunito), "Nunito Sans", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-italiana), "Italiana", "Didot", Georgia, serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: #f0d6ce;
+  color: #2b1b22;
+}
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* ---------- Motifs ---------- */
+/* The wordmark: Italiana, uppercase, widely tracked, like the CHIC mark it is modeled on. */
+.brand {
+  @apply font-display uppercase tracking-brand;
+}
+/* The second line of the wordmark: Cormorant italic, the soft counterpoint to the capitals. */
+.brand-sub {
+  @apply font-serif italic normal-case tracking-[0.06em];
+}
+.hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(199, 170, 114, 0.9), transparent);
+}
+.eyebrow {
+  @apply inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-luxe text-rose-600;
+}
+.eyebrow::before {
+  content: "";
+  width: 1.75rem;
+  height: 1px;
+  background: #c7aa72;
+}
+.eyebrow-center::after {
+  content: "";
+  width: 1.75rem;
+  height: 1px;
+  background: #c7aa72;
+}
+.lede {
+  @apply font-serif text-2xl font-medium italic leading-snug text-plum-900 md:text-3xl;
+}
+/* Section titles: display face, uppercase, airy tracking. */
+.display-title {
+  @apply font-display uppercase leading-[1.05] tracking-[0.08em];
+}
+/* A soft blush wash for the gentle bands. */
+.blush-band {
+  background:
+    radial-gradient(70rem 30rem at 0% 0%, rgba(240, 214, 206, 0.55), transparent 70%),
+    radial-gradient(60rem 28rem at 100% 100%, rgba(234, 239, 231, 0.7), transparent 70%),
+    #faf1ed;
+}
+
+/* ---------- Reveal on scroll (only once JavaScript has run; otherwise everything shows) ---------- */
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+html.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-delay-1 {
+  transition-delay: 0.12s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.24s;
+}
+.reveal-delay-3 {
+  transition-delay: 0.36s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------- Hero ---------- */
+/* The home cover: a light plum wash so the flowers stay bright, deeper at the foot for the area line. */
+.hero-overlay-cover {
+  background: linear-gradient(180deg, rgba(43, 27, 34, 0.42) 0%, rgba(43, 27, 34, 0.26) 50%, rgba(43, 27, 34, 0.78) 100%);
+}
+/* Inner-page heroes: darker top and bottom, a soft pool behind the text, and a rose tint. */
+.hero-overlay-bottom {
+  background:
+    linear-gradient(180deg, rgba(43, 27, 34, 0.55) 0%, rgba(43, 27, 34, 0.25) 40%, rgba(43, 27, 34, 0.8) 100%),
+    radial-gradient(80% 60% at 30% 85%, rgba(43, 27, 34, 0.45), transparent 75%),
+    linear-gradient(0deg, rgba(131, 66, 75, 0.12), rgba(131, 66, 75, 0.12));
+}
+.on-photo {
+  text-shadow:
+    0 1px 2px rgba(43, 27, 34, 0.55),
+    0 4px 24px rgba(43, 27, 34, 0.5);
+}
+.on-photo-strong {
+  text-shadow:
+    0 2px 4px rgba(43, 27, 34, 0.6),
+    0 10px 40px rgba(43, 27, 34, 0.55);
+}
+@keyframes heroZoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.hero-image {
+  animation: heroZoom 1.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.rise-1 {
+  animation-delay: 0.25s;
+}
+.rise-2 {
+  animation-delay: 0.45s;
+}
+.rise-3 {
+  animation-delay: 0.65s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-image,
+  .rise {
+    animation: none;
+  }
+}
+
+/* ---------- Menu overlay ---------- */
+.menu-link {
+  @apply font-display uppercase text-[clamp(1.5rem,4.2vw,2.4rem)] leading-none tracking-[0.14em] text-plum-900 transition-all duration-300 hover:tracking-[0.22em] hover:text-rose-600;
+}
+
+/* ---------- Image frames & tiles ---------- */
+.frame {
+  @apply relative overflow-hidden bg-blush-100;
+}
+.frame img {
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.frame:hover img {
+  transform: scale(1.04);
+}
+/* An arched frame: the romantic window shape used for the portraits. */
+.arch {
+  border-radius: 999px 999px 6px 6px;
+}
+.tile-overlay {
+  @apply pointer-events-none absolute inset-0 flex items-center justify-center bg-plum-950/50 p-6 text-center opacity-0 transition-opacity duration-500;
+}
+.group:hover .tile-overlay,
+.group:focus-visible .tile-overlay {
+  opacity: 1;
+}
+
+/* ---------- Horizontal scroller ---------- */
+.scroll-x {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.scroll-x::-webkit-scrollbar {
+  display: none;
+}
+.scroll-x > * {
+  scroll-snap-align: start;
+}
+
+/* ---------- Prose ---------- */
+.prose-bsb p {
+  @apply text-[1.0625rem] leading-[1.8] text-plum-800;
+}
+.prose-bsb p + p {
+  @apply mt-5;
+}
+.prose-bsb a {
+  @apply text-rose-600 underline decoration-gold-400 underline-offset-4 hover:text-plum-900;
+}
+.prose-bsb strong {
+  @apply font-semibold text-plum-900;
+}
